@@ -193,6 +193,8 @@ func LoadRawData(raw interface{}) (f Float64Data) {
 			}
 		case time.Duration:
 			f = append(f, float64(t))
+		case uint64:
+			f = append(f, float64(t))
 		}
 	}
 	return f
